@@ -48,13 +48,7 @@ public class FireBaseServiceUser {
                     for(DataSnapshot s : dataSnapshot.getChildren())
                     {
                         User user = s.getValue(User.class);
-                        System.out.println(
-                                "id: "+user.getId() +
-                                " || firstName: " + user.getFirstName() +
-                                " || lastName: " + user.getLastName() +
-                                " || email: " + user.getEmail() +
-                                " || phoneNumber: " + user.getPhoneNumber() +
-                                " || address: " + user.getAddress());
+                        System.out.println(user.toString());
                     }
                 }
             }
@@ -75,13 +69,7 @@ public class FireBaseServiceUser {
                     for(DataSnapshot s : dataSnapshot.getChildren()) {
                         User user = s.getValue(User.class);
                         if (user.getId().equals(UserId))
-                            System.out.println(
-                                    "id: "+user.getId() +
-                                            " || firstName: " + user.getFirstName() +
-                                            " || lastName: " + user.getLastName() +
-                                            " || email: " + user.getEmail() +
-                                            " || phoneNumber: " + user.getPhoneNumber() +
-                                            " || address: " + user.getAddress());
+                            System.out.println(user.toString());
                     }
                 }
 
